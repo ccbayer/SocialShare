@@ -41,6 +41,14 @@ $(document).ready(function() {
           "url": "url=",
           "hl": "hl=" //https://developers.google.com/+/web/share/#available-languages
         }
+      },
+      "pinterest": {
+	      shareurl: "https://www.pinterest.com/pin/create/button/?",
+	      paramproto: {
+		      "url": "url=",
+		      "mediaurl": "media=",
+		      "description": "description="
+	      }
       }
     };
 
@@ -71,6 +79,14 @@ $(document).ready(function() {
           options.mini = "true";
         }
       }
+
+      //check for pinterest: if no url is passed, use the same as media url.
+      if (name === "pinterest") {
+        if (!options.url && options.mediaurl) {
+          options.url = options.mediaurl;
+        }
+      }
+
 
       //get array of query params;
       var queryParams = getQueryStringArray(options, paramProto);

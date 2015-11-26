@@ -60,6 +60,7 @@ Include the javscript file in your web page:
 - [Twitter](https://dev.twitter.com/web/tweet-button/web-intent)
 - [Linkedin](https://developer.linkedin.com/docs/share-on-linkedin)
 - [Google+](https://developers.google.com/+/web/share/#share-link)
+- [Pinterest](https://developers.pinterest.com/docs/widgets/pin-it/)
 
 ##Usage
 
@@ -109,6 +110,9 @@ The `paramOptions` object is optional. By invoking the `share` method with only 
 |                         | source           | The source of the content (e.g. your website or application name)                   |
 | `"googleplus"`          | url              | URL to shared page; value is relative from the location.href of the page            |
 |                         | hl               | The language code for the locale to use on the Google+ sharing page                 |
+| `"pinterest"`			  | url              | The URL that hosts the source image (sometimes this URL is the same as the media url) |
+|  | mediaurl | the URL of the media being pinned. This shows up on the Pinterest board. |
+|  | description | Description of the pinned image (optional) |
 
 
 - **For each social network, the url parameter will be auto-populated from the `location.href` of the page when not explicitly set.**
